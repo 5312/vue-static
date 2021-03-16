@@ -1,0 +1,27 @@
+.DS_Store
+node_modules/
+dist/
+
+public/mp.mp4
+public/video.mp4
+src/assets/mp.cf77266c.mp4
+src/assets/kcxcp.mp4
+src/assets/mp.mp4
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
