@@ -3,10 +3,12 @@ node_modules/
 dist/
 
 public/mp.mp4
+public/ds.mp4
 public/video.mp4
 src/assets/mp.cf77266c.mp4
 src/assets/kcxcp.mp4
 src/assets/mp.mp4
+src/assets/ds.mp4
 # local env files
 .env.local
 .env.*.local
