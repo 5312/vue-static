@@ -1,7 +1,7 @@
 <template>
   <div
     class="main"
-    @wheel.prevent="wheel"
+    @wheel="wheel"
   >
     <div id="nav">
       <router-link to="/">
@@ -74,8 +74,7 @@ export default {
         num =
           array.indexOf(this.route.path) >= 2 ? -1 : array.indexOf(this.route.path)
         // 向下
-        // console.log(num)
-        if (num === 1) {
+        if (array.indexOf(this.route.path) === 2) {
           return
         }
         this.router.push({
@@ -84,7 +83,7 @@ export default {
       } else {
         num =
           array.indexOf(this.route.path) <= 0
-            ? 2
+            ? 3
             : array.indexOf(this.route.path)
         // 向上
         this.router.push({

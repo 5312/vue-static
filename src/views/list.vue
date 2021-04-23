@@ -24,23 +24,26 @@
         v-for="(a,b) in list"
         :key="b"
         class="bottom"
+        :ref="'wrapper'+b"
         :class="{'hide':index !=b}"
       >
-        <div
-          v-for="(x,y) in a.data"
-          :key="y"
-          class="data"
-        >
-          <div class="left">
-            <div>{{ x.num }}.</div>
-            <div class="nbsp" />
-            <div>{{ x.name }}</div>
-          </div>
+        <div class="content">
           <div
-            class="go"
-            @click="gounit(x.url)"
+            v-for="(x,y) in a.data"
+            :key="y"
+            class="data"
           >
+            <div class="left">
+              <div>{{ x.num }}.</div>
+              <div class="nbsp" />
+              <div>{{ x.name }}</div>
+            </div>
+            <div
+              class="go"
+              @click="gounit(x.url)"
+            >
             <!-- {{ x.url }} -->
+            </div>
           </div>
         </div>
       </div>
@@ -49,6 +52,7 @@
 </template>
 
 <script>
+import BScroll from 'better-scroll'
 export default {
   name: 'List',
   data () {
@@ -111,6 +115,13 @@ export default {
       ]
 
     }
+  },
+  mounted () {
+    const BS = BScroll
+    this.$nextTick(() => {
+      this.scroll = new BS(this.$refs.wrapper0, {})
+      this.scroll = new BS(this.$refs.wrapper1, {})
+    })
   },
   methods: {
     gounit (url) {
