@@ -4,33 +4,16 @@
     @wheel.prevent="wheel"
   >
     <div id="nav">
-      <div class="logo">
-        <img
-          src="./assets/img/page1/logo.png"
-          alt
-        >
-      </div>
       <router-link to="/">
-        首页
-      </router-link>
-      <router-link
-        to="/about"
-        v-slot="{}"
-      >
         课程介绍
       </router-link>
-      <router-link to="/team">
-        课程团队
+      <router-link
+        to="/newteam"
+      >
+        团队介绍
       </router-link>
-
-      <router-link to="/experience">
-        抢先体验
-      </router-link>
-      <router-link to="/video">
-        宣传视频
-      </router-link>
-      <router-link to="/download">
-        软件下载
+      <router-link to="/list">
+        课程列表
       </router-link>
     </div>
 
@@ -89,17 +72,19 @@ export default {
       let num = 0
       if (type === 'down') {
         num =
-          array.indexOf(this.route.path) >= 5
-            ? -1
-            : array.indexOf(this.route.path)
+          array.indexOf(this.route.path) >= 2 ? -1 : array.indexOf(this.route.path)
         // 向下
+        // console.log(num)
+        if (num === 1) {
+          return
+        }
         this.router.push({
           path: array[num + 1]
         })
       } else {
         num =
           array.indexOf(this.route.path) <= 0
-            ? 6
+            ? 2
             : array.indexOf(this.route.path)
         // 向上
         this.router.push({
@@ -133,17 +118,16 @@ body {
   width: 100%;
   // min-width: 1920px;
   height: 100%;
+  // height: 1500px;
   position: relative;
   overflow: hidden;
 }
 #nav {
   user-select: none;
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 70%;
-  min-width: 1400px;
+  top: 100px;
+  right:80px;
+  width:800px;
   z-index: 9;
   height: 140px;
   margin: auto;
@@ -155,14 +139,20 @@ body {
   .logo {
     // margin-left: 20px;
   }
+  @height:80px;
   a {
     text-decoration: none;
     padding: 3px 5px;
     border-radius: 4px;
+    width:400px;
+    height:@height;
+    line-height:@height;
     color: @color;
+    text-align:center;
+    background:url('./assets/img/class/group.png') 100% 100% / 100% 100% no-repeat;
     &.router-link-exact-active {
-      color: #000;
-      background: #fff;
+      // color: #000;
+      // background: #fff;
     }
   }
 }
