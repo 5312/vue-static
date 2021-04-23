@@ -2,6 +2,10 @@
 node_modules/
 dist/
 
+*.xml
+*.log
+*.apk
+*.mp4
 public/mp.mp4
 public/ds.mp4
 public/video.mp4
