@@ -54,11 +54,12 @@ export default {
   methods: {
     wheel (e) {
       debounce(() => {
-        if (e.deltaY > 0) {
-          this.rou('down')
-        } else {
-          this.rou('up')
-        }
+
+        // if (e.deltaY > 0) {
+        //   this.rou('down')
+        // } else {
+        //   this.rou('up')
+        // }
       }, 200)
     },
     rou (type) {
@@ -103,6 +104,7 @@ body {
   margin: 0;
   width: 100%;
   height: 100%;
+  font-size:100px;
 }
 #app {
   font-family: '微软雅黑', 'Microsoft YaHei', sans-serif;
@@ -126,7 +128,7 @@ body {
   position: fixed;
   top: 100px;
   right:80px;
-  width:800px;
+  // width:800px;
   z-index: 9;
   height: 140px;
   margin: auto;
@@ -138,17 +140,19 @@ body {
   .logo {
     // margin-left: 20px;
   }
-  @height:80px;
+  @height:150px;
   a {
     text-decoration: none;
     padding: 3px 5px;
     border-radius: 4px;
-    width:400px;
+    width:300px;
     height:@height;
+    font-weight:700;
+    text-shadow: 1px 1px 2px #333;
     line-height:@height;
     color: @color;
     text-align:center;
-    background:url('./assets/img/class/group.png') 100% 100% / 100% 100% no-repeat;
+    background:url('./assets/img/class/group1.png') 100% 100% / 100% 100% no-repeat;
     &.router-link-exact-active {
       // color: #000;
       // background: #fff;
