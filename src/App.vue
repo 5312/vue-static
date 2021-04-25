@@ -19,12 +19,12 @@
 
     <router-view v-slot="{ Component }">
       <!-- leave-active-class="animate__animated animate__fadeInUp" -->
-      <transition
+      <!-- <transition
         enter-active-class="animate__animated animate__fadeInUp"
         mode="out-in"
-      >
-        <component :is="Component" />
-      </transition>
+      > -->
+      <component :is="Component" />
+      <!-- </transition> -->
     </router-view>
   </div>
 </template>
