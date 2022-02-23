@@ -1,7 +1,7 @@
 <template>
   <div
     class="warp"
-    id="1"
+    id="ww"
   >
     <!-- <img
       alt="Vue logo"
@@ -33,8 +33,13 @@ export default {
 
 <style lang="less" scope>
 @bg: #1f1f1f;
+
+#ww {
+  height: 100%;
+}
 .warp {
   height: 100%;
+
   width: 100%;
   position: relative;
   background: url('../assets/img/class/bg(1).png') no-repeat;
