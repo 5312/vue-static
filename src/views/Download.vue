@@ -1,12 +1,11 @@
 <template>
   <div class="homes">
     <div class="center">
-      <div class="title">
-        立刻体验完整版
-      </div>
+      <div class="title">立刻体验完整版</div>
       <div class="slider" />
       <a
-        href=""
+        href="http://192.168.3.101:8081/static/HGD.rar"
+        download="HGD.rar"
         target="_blank"
         class="down"
       >
@@ -30,7 +29,7 @@ export default {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  background: url('../assets/img/page6/bg.png') 100% 100% /100% 100% no-repeat;
+  background: url("../assets/img/page6/bg.png") 100% 100% /100% 100% no-repeat;
   .center {
     position: absolute;
     left: 0;
@@ -51,7 +50,7 @@ export default {
       width: 80px;
       height: 5px;
       margin: auto;
-      background: url('../assets/img/page6/slider.png') 100% 100% /100% 100% no-repeat;
+      background: url("../assets/img/page6/slider.png") 100% 100% /100% 100% no-repeat;
     }
     @height: 70px;
     .down {
@@ -65,7 +64,7 @@ export default {
       line-height: @height;
       text-align: center;
       color: #fff;
-      background: url('../assets/img/page6/btnd.png') 100% 100% /100% 100% no-repeat;
+      background: url("../assets/img/page6/btnd.png") 100% 100% /100% 100% no-repeat;
     }
   }
 }
