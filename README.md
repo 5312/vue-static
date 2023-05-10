@@ -1,4 +1,4 @@
-## master 主分支为 军工大学课程介绍
+## master 主分支为 某大学课程介绍
 
 # vue-static
 
